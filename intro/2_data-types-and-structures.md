@@ -42,3 +42,44 @@ a = 3 % 2
 ```
 
 The pi constant is available as a global constant pi or π (Open image in new window).
+
+### 2.1.2 Strings
+
+The String type in Julia can be seen in some ways as a specialized array of individual chars (for example, strings support indexing or looping over their individual letters like an Array would). Unlike arrays, strings are immutable (a="abc"; a[2]="B" would raise an error).
+
+A string on a single row can be created using a single pair of double quotes, while a string on multiple rows can use a triple pair of double quotes:
+
+```julia
+a = "a string"      JULIA
+b = "a string\non multiple rows\n"
+c = """
+a string
+on multiple rows
+"""
+a[3] # Returns 's'
+```
+
+Julia supports most typical string operations. For example:
+
+- split(s, " ") defaults to whitespace
+
+- join([s1,s2], "")
+
+- replace(s, "toSearch" => "toReplace")
+
+- strip(s) Removes leading and trailing whitespace
+
+To convert strings representing numbers to integers or floats, use myInt = parse(Int,"2017"). To convert integers or floats to strings, use myString = string(123).
+
+#### Concatenation
+
+There are several ways to concatenate strings:
+
+- Using the concatenation operator: *
+
+- Using the string function: string(str1,str2,str3)
+
+- Using interpolation, that is combining string variables using the dollar sign: a = "$str1 is a string and $(myObject.int1) is an integer" (note the use of parentheses for larger expressions)
+
+While both the string function and the use of interpolation automatically cast compatible types (e.g., Float64 and Int64) into strings, the concatenation operator * doesn’t. Be careful not to mistake the string function (with a lowercase s) with the String type and the homonymous constructor (with a capital S).
+
