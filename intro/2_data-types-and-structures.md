@@ -28,3 +28,7 @@ While the Boolean values true and false in a integer context are automatically c
 The “default” integer type in Julia is Int64 (there are actually 10 different variants of integer types), and it is able to store values between -2^63 and 2^63-1. Similarly, the “default” floating-point type is Float64. Complex numbers (Complex{T}) are supported through the global constant im, representing the principal square root of -1.
 
 A complex number can then be defined as a = 1 + 2im. The mathematical focus of Julia is evident by the fact that there is a native type even for exact ratios of integers, Rational{Int64}, whose instances can be constructed using the // operator:
+
+```julia
+a = 2 // 3
+```
