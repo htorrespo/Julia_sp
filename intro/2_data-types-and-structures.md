@@ -32,3 +32,13 @@ A complex number can then be defined as a = 1 + 2im. The mathematical focus of J
 ```julia
 a = 2 // 3
 ```
+
+### 2.1.1 Basic Mathematic Operations
+
+All standard basic mathematical arithmetic operators are supported in the obvious way (+ , - , * , /). To raise a number to a power, use the  ̂ operator (e.g., a = 3^2). Natural exponential expressions (i.e., with the Euler’s number e as a base) are created with a = exp(b) or by using the global constant ℯ (This is not the normal letter e, but the special Unicode symbol for the Euler’s number: type Open image in new window in the REPL to obtain it or use MathConstants.e.). Integer divisions are implemented with the ÷ operator (Open image in new window) and their remainders are given using the “modulo” % operator, as follows:
+
+```julia
+a = 3 % 2
+```
+
+The pi constant is available as a global constant pi or π (Open image in new window).
